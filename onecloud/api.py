@@ -105,6 +105,13 @@ class OneCloudApi(object):
         :return: float значение баланса
         """
         return self.req(path='/customer/balance', method='GET')
+    
+    def get_account(self):
+        """Запрос состояния учетной записи пользователя
+
+        :return: JSON объект данных об учетной записи
+        """
+        return self.req(path='/account', method='GET')
 
     def get_images_list(self):
         """Образы (шаблоны) возможных систем для установки на сервер
